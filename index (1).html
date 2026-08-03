@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soreti International Hotel | Hotel in Bedele, Ethiopia</title>
+<meta name="description" content="Soreti International Hotel in Bedele, Ethiopia — comfortable accommodation, dining, events, and professional hospitality.">
+<meta property="og:title" content="Soreti International Hotel | Bedele, Ethiopia">
+<meta property="og:description" content="Elegant accommodation, warm Ethiopian hospitality, and modern comfort in the heart of Bedele.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230D0C0A'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' fill='%23C9A24B' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Hotel",
+  "name": "Soreti International Hotel",
+  "description": "Soreti International Hotel in Bedele, Ethiopia — comfortable accommodation, dining, events, and professional hospitality.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bedele",
+    "addressCountry": "ET"
+  }
+}
+</script>
+<style>
+  :root{
+    --black:#0D0C0A;
+    --charcoal:#1C1815;
+    --charcoal-2:#241F1B;
+    --gold:#C9A24B;
+    --gold-light:#E4C97E;
+    --ivory:#FAF7F0;
+    --beige:#EFE7D8;
+    --line: rgba(201,162,75,0.25);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Manrope',sans-serif;
+    background:var(--ivory);
+    color:var(--charcoal);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4,.display{
+    font-family:'Fraunces',serif;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow{
+    font-family:'Manrope',sans-serif;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    font-weight:600;
+    color:var(--gold);
+  }
+  .gold-rule{
+    width:56px;height:1px;background:var(--gold);
+  }
+  ::selection{ background:var(--gold); color:var(--black); }
+
+  /* Coffee-pot (jebena) signature motif, drawn in CSS via SVG mask-free inline use */
+  .jebena{ opacity:.9; }
+
+  /* Sticky nav shrink */
+  #navbar{ transition: background-color .4s ease, padding .4s ease, box-shadow .4s ease; }
+  #navbar.scrolled{ background-color: rgba(13,12,10,0.92); backdrop-filter: blur(10px); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+
+  .nav-link{ position:relative; }
+  .nav-link::after{
+    content:''; position:absolute; left:0; bottom:-6px; width:0%; height:1px; background:var(--gold);
+    transition: width .3s ease;
+  }
+  .nav-link:hover::after{ width:100%; }
+
+  /* Hero */
+  .hero-bg{
+    background-image: linear-gradient(180deg, rgba(13,12,10,0.55) 0%, rgba(13,12,10,0.35) 35%, rgba(13,12,10,0.85) 100%), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2400&auto=format&fit=crop');
+    background-size:cover; background-position:center;
+  }
+  .fade-up{ opacity:0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .fade-up.in{ opacity:1; transform:translateY(0); }
+
+  /* Cards */
+  .room-card{ transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s ease; }
+  .room-card:hover{ transform: translateY(-6px); box-shadow: 0 24px 48px rgba(13,12,10,0.16); }
+  .room-card .room-img{ transition: transform .8s cubic-bezier(.2,.8,.2,1); }
+  .room-card:hover .room-img{ transform: scale(1.06); }
+
+  .facility-card{ border:1px solid var(--line); transition: border-color .35s ease, transform .35s ease, background-color .35s ease; }
+  .facility-card:hover{ border-color: var(--gold); transform: translateY(-4px); background-color: rgba(201,162,75,0.05); }
+
+  .placeholder-tag{
+    font-size:.68rem; letter-spacing:.08em; text-transform:uppercase;
+    color:#9A8F7C; font-style:italic; font-weight:500;
+  }
+
+  .btn-gold{
+    background:var(--gold); color:var(--black); font-weight:600; letter-spacing:.06em; text-transform:uppercase; font-size:.78rem;
+    transition: background-color .3s ease, transform .3s ease;
+  }
+  .btn-gold:hover{ background:var(--gold-light); transform: translateY(-2px); }
+  .btn-outline{
+    border:1px solid var(--gold); color:var(--gold); font-weight:600; letter-spacing:.06em; text-transform:uppercase; font-size:.78rem;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  .btn-outline:hover{ background:var(--gold); color:var(--black); }
+  .btn-dark-outline{
+    border:1px solid rgba(13,12,10,0.25); color:var(--charcoal); font-weight:600; letter-spacing:.06em; text-transform:uppercase; font-size:.78rem;
+    transition: all .3s ease;
+  }
+  .btn-dark-outline:hover{ background:var(--charcoal); color:var(--ivory); border-color:var(--charcoal); }
+
+  /* Gallery lightbox */
+  #lightbox{ display:none; }
+  #lightbox.open{ display:flex; }
+
+  /* Booking bar */
+  .booking-panel{ backdrop-filter: blur(14px); background: rgba(28,24,21,0.55); border:1px solid rgba(201,162,75,0.35); }
+  .booking-panel input, .booking-panel select{
+    background: transparent; color: var(--ivory); border:none; outline:none; width:100%;
+  }
+  .booking-panel input::placeholder{ color: rgba(250,247,240,0.55); }
+  .booking-field{ border-right:1px solid rgba(255,255,255,0.15); }
+  @media (max-width:900px){ .booking-field{ border-right:none; border-bottom:1px solid rgba(255,255,255,0.15); } }
+
+  /* form inputs */
+  .field input, .field select, .field textarea{
+    border:1px solid rgba(13,12,10,0.15); background:#fff; padding:.85rem 1rem; width:100%; font-size:.92rem;
+    transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,75,0.18);
+  }
+  .field label{ font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:#6B6255; font-weight:600; margin-bottom:.4rem; display:block; }
+
+  /* AI concierge */
+  #ai-toggle{ box-shadow: 0 12px 32px rgba(13,12,10,0.35); }
+  #ai-panel{ transform-origin: bottom right; transition: transform .3s ease, opacity .3s ease; }
+  #ai-panel.hidden-panel{ transform: scale(.85) translateY(12px); opacity:0; pointer-events:none; }
+
+  .msg-bubble{ max-width: 85%; }
+
+  .stars{ color: var(--gold); letter-spacing:.1em; }
+
+  input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible{
+    outline: 2px solid var(--gold); outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+  }
+
+  .marquee-track{ animation: scroll-left 32s linear infinite; }
+  @keyframes scroll-left{ from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 py-5">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+    <a href="#home" class="flex flex-col leading-none">
+      <span class="display text-2xl tracking-widest text-[var(--gold-light)]" style="letter-spacing:.18em;">SORETI</span>
+      <span class="text-[0.58rem] tracking-[0.35em] text-[var(--ivory)]/70 mt-0.5">INTERNATIONAL HOTEL</span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-8 text-[var(--ivory)]">
+      <a href="#home" class="nav-link text-sm">Home</a>
+      <a href="#about" class="nav-link text-sm">About</a>
+      <a href="#rooms" class="nav-link text-sm">Rooms &amp; Suites</a>
+      <a href="#restaurant" class="nav-link text-sm">Restaurant</a>
+      <a href="#facilities" class="nav-link text-sm">Facilities</a>
+      <a href="#events" class="nav-link text-sm">Events</a>
+      <a href="#gallery" class="nav-link text-sm">Gallery</a>
+      <a href="#reviews" class="nav-link text-sm">Reviews</a>
+      <a href="#contact" class="nav-link text-sm">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="#booking" class="hidden sm:inline-block btn-gold px-5 py-2.5">Book Now</a>
+      <button id="menuBtn" aria-label="Open menu" aria-expanded="false" class="lg:hidden text-[var(--ivory)] p-2">
+        <svg id="menuIcon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-[var(--black)] mt-5 border-t border-[var(--line)]">
+    <div class="flex flex-col px-6 py-6 gap-5 text-[var(--ivory)]">
+      <a href="#home" class="mobile-link text-base">Home</a>
+      <a href="#about" class="mobile-link text-base">About</a>
+      <a href="#rooms" class="mobile-link text-base">Rooms &amp; Suites</a>
+      <a href="#restaurant" class="mobile-link text-base">Restaurant</a>
+      <a href="#facilities" class="mobile-link text-base">Facilities</a>
+      <a href="#events" class="mobile-link text-base">Events</a>
+      <a href="#gallery" class="mobile-link text-base">Gallery</a>
+      <a href="#reviews" class="mobile-link text-base">Reviews</a>
+      <a href="#contact" class="mobile-link text-base">Contact</a>
+      <a href="#booking" class="mobile-link btn-gold text-center px-5 py-3 mt-2">Book Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero-bg relative min-h-[100svh] flex items-end">
+  <div class="max-w-7xl mx-auto px-6 pb-40 pt-40 w-full">
+    <p class="fade-up eyebrow text-[var(--gold-light)] mb-6">Bedele, Ethiopia</p>
+    <h1 class="fade-up display text-[var(--ivory)] text-4xl sm:text-6xl lg:text-7xl leading-[1.05] max-w-4xl">
+      Welcome to Soreti<br>International Hotel
+    </h1>
+    <p class="fade-up display italic text-[var(--gold-light)] text-xl sm:text-2xl mt-6">Experience Comfort. Discover Bedele.</p>
+    <p class="fade-up text-[var(--ivory)]/75 max-w-xl mt-5 leading-relaxed">
+      Elegant accommodation, warm Ethiopian hospitality, and modern comfort in the heart of Bedele.
+    </p>
+    <div class="fade-up flex flex-wrap gap-4 mt-9">
+      <a href="#booking" class="btn-gold px-7 py-3.5">Book Your Stay</a>
+      <a href="#rooms" class="border border-[var(--ivory)]/40 text-[var(--ivory)] px-7 py-3.5 text-xs tracking-[.06em] uppercase font-semibold hover:border-[var(--gold)] hover:text-[var(--gold-light)] transition-colors">Explore Rooms</a>
+    </div>
+  </div>
+
+  <!-- booking search panel -->
+  <div id="booking" class="relative w-full px-6 -mb-16 sm:-mb-10 z-10">
+    <div class="max-w-6xl mx-auto booking-panel rounded-sm px-6 sm:px-8 py-7">
+      <form id="searchForm" class="grid grid-cols-2 md:grid-cols-5 gap-6 items-end">
+        <div class="booking-field field pr-6">
+          <label class="text-[var(--gold-light)]">Check-in</label>
+          <input type="date" required>
+        </div>
+        <div class="booking-field field pr-6">
+          <label class="text-[var(--gold-light)]">Check-out</label>
+          <input type="date" required>
+        </div>
+        <div class="booking-field field pr-6">
+          <label class="text-[var(--gold-light)]">Guests</label>
+          <select>
+            <option class="text-black">1 Guest</option>
+            <option class="text-black">2 Guests</option>
+            <option class="text-black">3 Guests</option>
+            <option class="text-black">4+ Guests</option>
+          </select>
+        </div>
+        <div class="booking-field field pr-6">
+          <label class="text-[var(--gold-light)]">Rooms</label>
+          <select>
+            <option class="text-black">1 Room</option>
+            <option class="text-black">2 Rooms</option>
+            <option class="text-black">3+ Rooms</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-gold py-3.5 col-span-2 md:col-span-1">Search Availability</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-32 pt-40 sm:pt-32 bg-[var(--ivory)]">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="fade-up order-2 lg:order-1">
+      <p class="eyebrow mb-4">About Us</p>
+      <h2 class="display text-4xl sm:text-5xl leading-tight mb-6">A Place to Stay.<br>A Place to Feel at Home.</h2>
+      <div class="gold-rule mb-6"></div>
+      <p class="text-[var(--charcoal)]/80 leading-relaxed mb-4">
+        Soreti International Hotel provides comfortable accommodation, professional hospitality, dining, and event
+        services for visitors to Bedele — whether you're passing through on business, exploring the region, or
+        gathering with family and friends.
+      </p>
+      <p class="text-[var(--charcoal)]/80 leading-relaxed mb-8">
+        Every stay is shaped around warm Ethiopian hospitality paired with modern comfort, so guests always have a
+        dependable place to rest, work, and connect.
+      </p>
+      <a href="#rooms" class="btn-dark-outline px-6 py-3 inline-block">Discover More</a>
+
+      <div class="grid grid-cols-2 gap-8 mt-14 pt-10 border-t border-[var(--line)]">
+        <div>
+          <p class="display text-3xl text-[var(--gold)] mb-1">Comfortable</p>
+          <p class="text-sm text-[var(--charcoal)]/70">Rooms &amp; Suites</p>
+        </div>
+        <div>
+          <p class="display text-3xl text-[var(--gold)] mb-1">Professional</p>
+          <p class="text-sm text-[var(--charcoal)]/70">Guest Service</p>
+        </div>
+        <div>
+          <p class="display text-3xl text-[var(--gold)] mb-1">On-site</p>
+          <p class="text-sm text-[var(--charcoal)]/70">Restaurant &amp; Dining</p>
+        </div>
+        <div>
+          <p class="display text-3xl text-[var(--gold)] mb-1">Dedicated</p>
+          <p class="text-sm text-[var(--charcoal)]/70">Event Facilities</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-up order-1 lg:order-2 relative">
+      <div class="aspect-[4/5] overflow-hidden rounded-sm">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1600&auto=format&fit=crop" alt="Soreti International Hotel lobby — placeholder photography" class="w-full h-full object-cover">
+      </div>
+      <div class="absolute -bottom-8 -left-8 hidden sm:block bg-[var(--charcoal)] text-[var(--ivory)] px-8 py-6 rounded-sm max-w-[220px]">
+        <svg class="jebena mb-3" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.3"><path d="M9 2c0 1.5-1.5 1.5-1.5 3S9 7 9 8.5M13 4c0 1-1 1-1 2s1 1 1 2"/><path d="M6 9h12l-1.2 9.5A2 2 0 0 1 14.8 20H9.2a2 2 0 0 1-2-1.5L6 9Z"/><path d="M6 12h12M4 12h2M18 12h2"/></svg>
+        <p class="text-xs leading-relaxed text-[var(--ivory)]/80">Ethiopian hospitality, woven into every detail.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROOMS ============ -->
+<section id="rooms" class="py-32 bg-[var(--beige)]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="fade-up text-center max-w-2xl mx-auto mb-16">
+      <p class="eyebrow mb-4">Accommodation</p>
+      <h2 class="display text-4xl sm:text-5xl mb-5">Rooms &amp; Suites</h2>
+      <div class="gold-rule mx-auto"></div>
+      <p class="text-[var(--charcoal)]/70 mt-6">
+        Choose the accommodation that fits your stay. Details below are placeholders until confirmed by the hotel.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8" id="roomGrid"></div>
+  </div>
+</section>
+
+<!-- ============ RESTAURANT ============ -->
+<section id="restaurant" class="py-32 bg-[var(--charcoal)] text-[var(--ivory)] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="fade-up relative">
+      <div class="aspect-[4/5] overflow-hidden rounded-sm">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1600&auto=format&fit=crop" alt="Hotel restaurant — placeholder photography" class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="fade-up">
+      <p class="eyebrow mb-4">Dining</p>
+      <h2 class="display text-4xl sm:text-5xl mb-6">Taste the Experience</h2>
+      <div class="gold-rule mb-6"></div>
+      <p class="text-[var(--ivory)]/75 leading-relaxed mb-8">
+        Our restaurant offers guests and visitors a comfortable place to enjoy quality meals and drinks — from
+        traditional Ethiopian cuisine to international favorites, served across breakfast, lunch, and dinner.
+      </p>
+
+      <div class="grid grid-cols-2 gap-4 mb-10">
+        <div class="border border-[var(--line)] px-5 py-4 rounded-sm">
+          <p class="text-sm font-semibold mb-1">Breakfast</p>
+          <p class="placeholder-tag text-[var(--gold-light)]">[Hours to be confirmed]</p>
+        </div>
+        <div class="border border-[var(--line)] px-5 py-4 rounded-sm">
+          <p class="text-sm font-semibold mb-1">Lunch</p>
+          <p class="placeholder-tag text-[var(--gold-light)]">[Hours to be confirmed]</p>
+        </div>
+        <div class="border border-[var(--line)] px-5 py-4 rounded-sm">
+          <p class="text-sm font-semibold mb-1">Dinner</p>
+          <p class="placeholder-tag text-[var(--gold-light)]">[Hours to be confirmed]</p>
+        </div>
+        <div class="border border-[var(--line)] px-5 py-4 rounded-sm">
+          <p class="text-sm font-semibold mb-1">Ethiopian &amp; International</p>
+          <p class="placeholder-tag text-[var(--gold-light)]">[Menu to be confirmed]</p>
+        </div>
+      </div>
+
+      <a href="#" class="btn-gold px-6 py-3 inline-block">View Menu</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACILITIES ============ -->
+<section id="facilities" class="py-32 bg-[var(--ivory)]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="fade-up text-center max-w-2xl mx-auto mb-16">
+      <p class="eyebrow mb-4">Facilities &amp; Services</p>
+      <h2 class="display text-4xl sm:text-5xl mb-5">Everything You Need, Close at Hand</h2>
+      <div class="gold-rule mx-auto"></div>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5" id="facilityGrid"></div>
+  </div>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section id="events" class="py-32 bg-[var(--charcoal)] text-[var(--ivory)]">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="fade-up">
+      <p class="eyebrow mb-4">Conference &amp; Events</p>
+      <h2 class="display text-4xl sm:text-5xl mb-6">Meet. Celebrate. Connect.</h2>
+      <div class="gold-rule mb-6"></div>
+      <p class="text-[var(--ivory)]/75 leading-relaxed mb-8">
+        From business conferences and training sessions to weddings, birthdays, and private gatherings, our event
+        space can be arranged to suit your occasion.
+      </p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <span class="border border-[var(--line)] rounded-full px-4 py-1.5 text-sm">Conferences</span>
+        <span class="border border-[var(--line)] rounded-full px-4 py-1.5 text-sm">Meetings &amp; Training</span>
+        <span class="border border-[var(--line)] rounded-full px-4 py-1.5 text-sm">Weddings</span>
+        <span class="border border-[var(--line)] rounded-full px-4 py-1.5 text-sm">Corporate Events</span>
+        <span class="border border-[var(--line)] rounded-full px-4 py-1.5 text-sm">Private Gatherings</span>
+      </div>
+      <p class="placeholder-tag text-[var(--gold-light)] mb-6">[Hall capacity and equipment to be confirmed]</p>
+      <a href="#contact" class="btn-gold px-6 py-3 inline-block">Plan Your Event</a>
+    </div>
+    <div class="fade-up aspect-[4/5] overflow-hidden rounded-sm">
+      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1600&auto=format&fit=crop" alt="Event space — placeholder photography" class="w-full h-full object-cover">
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="py-32 bg-[var(--beige)]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="fade-up text-center max-w-2xl mx-auto mb-16">
+      <p class="eyebrow mb-4">Gallery</p>
+      <h2 class="display text-4xl sm:text-5xl mb-5">A Glimpse Inside Soreti</h2>
+      <div class="gold-rule mx-auto"></div>
+      <p class="text-[var(--charcoal)]/70 mt-6">Placeholder photography — the hotel can replace these with real images at any time.</p>
+    </div>
+
+    <div class="flex flex-wrap gap-3 justify-center mb-10" id="galleryFilters"></div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="py-32 bg-[var(--ivory)] overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="fade-up text-center max-w-2xl mx-auto mb-16">
+      <p class="eyebrow mb-4">Guest Reviews</p>
+      <h2 class="display text-4xl sm:text-5xl mb-5">What Guests Are Saying</h2>
+      <div class="gold-rule mx-auto"></div>
+      <p class="placeholder-tag mt-6">[Placeholder reviews — to be replaced with genuine guest testimonials]</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8" id="reviewGrid"></div>
+  </div>
+</section>
+
+<!-- ============ BEDELE / LOCAL EXPERIENCE ============ -->
+<section class="py-32 bg-[var(--charcoal)] text-[var(--ivory)] relative">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <p class="fade-up eyebrow mb-4">Local Experience</p>
+    <h2 class="fade-up display text-4xl sm:text-5xl mb-6">Discover Bedele</h2>
+    <div class="fade-up gold-rule mx-auto mb-6"></div>
+    <p class="fade-up text-[var(--ivory)]/75 leading-relaxed max-w-2xl mx-auto mb-14">
+      Soreti International Hotel can serve as a comfortable base for exploring Bedele and the surrounding area —
+      whether you're here for local culture, nature, or business opportunities.
+    </p>
+    <div class="grid sm:grid-cols-3 gap-8 fade-up">
+      <div class="border border-[var(--line)] rounded-sm px-6 py-8">
+        <p class="display text-xl mb-2">Local Culture</p>
+        <p class="placeholder-tag text-[var(--gold-light)]">[Details to be confirmed]</p>
+      </div>
+      <div class="border border-[var(--line)] rounded-sm px-6 py-8">
+        <p class="display text-xl mb-2">Nature &amp; Surroundings</p>
+        <p class="placeholder-tag text-[var(--gold-light)]">[Details to be confirmed]</p>
+      </div>
+      <div class="border border-[var(--line)] rounded-sm px-6 py-8">
+        <p class="display text-xl mb-2">Business &amp; Travel</p>
+        <p class="placeholder-tag text-[var(--gold-light)]">[Details to be confirmed]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-32 bg-[var(--beige)]">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
+    <div class="fade-up">
+      <p class="eyebrow mb-4">Location &amp; Contact</p>
+      <h2 class="display text-4xl sm:text-5xl mb-6">Find Us in Bedele</h2>
+      <div class="gold-rule mb-8"></div>
+
+      <div class="space-y-5 mb-10">
+        <div>
+          <p class="text-sm font-semibold text-[var(--charcoal)]">Address</p>
+          <p class="placeholder-tag">[Exact hotel address]</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-[var(--charcoal)]">Phone</p>
+          <p class="placeholder-tag">[Hotel phone number]</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-[var(--charcoal)]">Email</p>
+          <p class="placeholder-tag">[Hotel email address]</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="tel:" class="btn-dark-outline px-6 py-3">Call the Hotel</a>
+        <a href="https://wa.me/" target="_blank" rel="noopener" class="btn-gold px-6 py-3">WhatsApp Us</a>
+      </div>
+
+      <div class="aspect-video rounded-sm overflow-hidden border border-[var(--line)]">
+        <iframe title="Bedele, Ethiopia map" src="https://www.google.com/maps?q=Bedele,Ethiopia&output=embed" class="w-full h-full" style="border:0;" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="fade-up bg-white p-8 sm:p-10 rounded-sm shadow-sm">
+      <h3 class="display text-2xl mb-6">Send a Message</h3>
+      <form id="contactForm" class="space-y-5" novalidate>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="field"><label>Name</label><input type="text" name="name" required></div>
+          <div class="field"><label>Email</label><input type="email" name="email" required></div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="field"><label>Phone</label><input type="tel" name="phone"></div>
+          <div class="field"><label>Subject</label><input type="text" name="subject" required></div>
+        </div>
+        <div class="field"><label>Message</label><textarea name="message" rows="4" required></textarea></div>
+        <button type="submit" class="btn-gold w-full py-3.5">Send Message</button>
+        <p id="contactStatus" class="text-sm hidden"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-[var(--black)] text-[var(--ivory)] pt-20 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <div>
+      <p class="display text-2xl tracking-[.18em] text-[var(--gold-light)] mb-2">SORETI</p>
+      <p class="text-xs tracking-[.3em] text-[var(--ivory)]/50 mb-5">INTERNATIONAL HOTEL</p>
+      <p class="italic text-[var(--ivory)]/70 text-sm">"Comfort. Hospitality. Experience."</p>
+    </div>
+    <div>
+      <p class="text-sm font-semibold text-[var(--gold)] mb-4 uppercase tracking-wide">Quick Links</p>
+      <ul class="space-y-2.5 text-sm text-[var(--ivory)]/70">
+        <li><a href="#home" class="hover:text-[var(--gold-light)]">Home</a></li>
+        <li><a href="#about" class="hover:text-[var(--gold-light)]">About</a></li>
+        <li><a href="#rooms" class="hover:text-[var(--gold-light)]">Rooms</a></li>
+        <li><a href="#restaurant" class="hover:text-[var(--gold-light)]">Restaurant</a></li>
+        <li><a href="#gallery" class="hover:text-[var(--gold-light)]">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-[var(--gold-light)]">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold text-[var(--gold)] mb-4 uppercase tracking-wide">Services</p>
+      <ul class="space-y-2.5 text-sm text-[var(--ivory)]/70">
+        <li>Rooms</li><li>Restaurant</li><li>Events</li><li>Conference</li><li>Facilities</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-semibold text-[var(--gold)] mb-4 uppercase tracking-wide">Contact</p>
+      <ul class="space-y-2.5 text-sm text-[var(--ivory)]/70">
+        <li>Bedele, Ethiopia</li>
+        <li class="placeholder-tag">[Phone number]</li>
+        <li class="placeholder-tag">[Email address]</li>
+      </ul>
+      <div class="flex gap-4 mt-5">
+        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full border border-[var(--line)] flex items-center justify-center hover:border-[var(--gold)] hover:text-[var(--gold)]">f</a>
+        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full border border-[var(--line)] flex items-center justify-center hover:border-[var(--gold)] hover:text-[var(--gold)]">ig</a>
+        <a href="#" aria-label="Telegram" class="w-9 h-9 rounded-full border border-[var(--line)] flex items-center justify-center hover:border-[var(--gold)] hover:text-[var(--gold)]">tg</a>
+        <a href="#" aria-label="TikTok" class="w-9 h-9 rounded-full border border-[var(--line)] flex items-center justify-center hover:border-[var(--gold)] hover:text-[var(--gold)]">tt</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-[var(--line)] text-xs text-[var(--ivory)]/45">
+    © 2026 Soreti International Hotel. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a href="https://wa.me/?text=Hello%20Soreti%20International%20Hotel%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20room." target="_blank" rel="noopener"
+   class="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-105 transition-transform" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9.9-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-2-1.2-.7-.6-1.2-1.4-1.4-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg>
+</a>
+
+<!-- ============ AI CONCIERGE ============ -->
+<button id="ai-toggle" class="fixed bottom-6 right-6 z-40 w-16 h-16 rounded-full bg-[var(--charcoal)] border border-[var(--gold)] flex items-center justify-center hover:scale-105 transition-transform" aria-label="Open Soreti AI Concierge">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M12 3a5 5 0 0 0-5 5v2a5 5 0 0 0 10 0V8a5 5 0 0 0-5-5Z"/><path d="M8 20c0-2.2 1.8-4 4-4s4 1.8 4 4"/><circle cx="9.5" cy="9" r="1"/><circle cx="14.5" cy="9" r="1"/></svg>
+</button>
+
+<div id="ai-panel" class="hidden-panel fixed bottom-24 right-6 z-40 w-[92vw] max-w-sm bg-[var(--charcoal)] text-[var(--ivory)] rounded-sm shadow-2xl border border-[var(--line)] flex flex-col overflow-hidden" style="height:min(560px,70vh);">
+  <div class="px-5 py-4 border-b border-[var(--line)] flex items-center justify-between bg-[var(--black)]">
+    <div>
+      <p class="display text-lg text-[var(--gold-light)]">Soreti AI Concierge</p>
+      <p class="text-[0.68rem] text-[var(--ivory)]/50">Placeholder assistant — not yet connected to a live AI</p>
+    </div>
+    <button id="ai-close" aria-label="Close concierge" class="text-[var(--ivory)]/60 hover:text-[var(--gold)] text-xl leading-none px-2">×</button>
+  </div>
+  <div id="ai-messages" class="flex-1 overflow-y-auto px-4 py-4 space-y-3 text-sm"></div>
+  <form id="ai-form" class="border-t border-[var(--line)] p-3 flex gap-2">
+    <input id="ai-input" type="text" placeholder="Ask about rooms, dining, events…" class="flex-1 bg-transparent border border-[var(--line)] rounded-sm px-3 py-2.5 text-sm text-[var(--ivory)] placeholder:text-[var(--ivory)]/40 outline-none focus:border-[var(--gold)]">
+    <button type="submit" class="btn-gold px-4 rounded-sm">Send</button>
+  </form>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="fixed inset-0 z-50 bg-black/90 items-center justify-center px-6">
+  <button id="lightboxClose" aria-label="Close" class="absolute top-6 right-6 text-white text-3xl leading-none">×</button>
+  <img id="lightboxImg" src="" alt="" class="max-h-[85vh] max-w-full object-contain rounded-sm">
+</div>
+
+<script>
+/* ---------- Data (placeholders where hotel details aren't confirmed) ---------- */
+const rooms = [
+  { name:"Standard Room", desc:"Comfortable accommodation for individual travelers.", img:"https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1400&auto=format&fit=crop" },
+  { name:"Deluxe Room", desc:"More spacious accommodation with enhanced comfort.", img:"https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1400&auto=format&fit=crop" },
+  { name:"Executive Room", desc:"Designed for business and professional travelers.", img:"https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1400&auto=format&fit=crop&sat=-30" },
+  { name:"Suite", desc:"Premium accommodation with additional space and luxury.", img:"https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400&auto=format&fit=crop" },
+];
+const roomGrid = document.getElementById('roomGrid');
+rooms.forEach(r=>{
+  roomGrid.insertAdjacentHTML('beforeend', `
+    <div class="room-card bg-white overflow-hidden rounded-sm fade-up">
+      <div class="aspect-[16/10] overflow-hidden">
+        <img src="${r.img}" alt="${r.name} — placeholder photography" class="room-img w-full h-full object-cover">
+      </div>
+      <div class="p-7">
+        <h3 class="display text-2xl mb-2">${r.name}</h3>
+        <p class="text-[var(--charcoal)]/70 text-sm mb-4">${r.desc}</p>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="placeholder-tag border border-[var(--line)] rounded-full px-3 py-1">[Amenities]</span>
+          <span class="placeholder-tag border border-[var(--line)] rounded-full px-3 py-1">[Room size]</span>
+          <span class="placeholder-tag border border-[var(--line)] rounded-full px-3 py-1">[Occupancy]</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="placeholder-tag">[Price per night]</span>
+          <div class="flex gap-3">
+            <button class="btn-dark-outline px-4 py-2 view-room" data-room="${r.name}">View Details</button>
+            <a href="#booking" class="btn-gold px-4 py-2">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>`);
+});
+
+const facilities = [
+  {n:"Comfortable Accommodation", i:"M4 19h16M6 19V9l6-4 6 4v10M9 19v-6h6v6"},
+  {n:"Restaurant", i:"M4 3v9m4-9v9M4 12h4m6-9v18m0-18a3 3 0 0 1 3 3v4h-3"},
+  {n:"Wi-Fi", i:"M5 12.5a11 11 0 0 1 14 0M8 15.5a6.5 6.5 0 0 1 8 0M12 18.5h.01"},
+  {n:"Room Service", i:"M3 12h18M5 12v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6M8 12V8a4 4 0 0 1 8 0v4"},
+  {n:"Conference Facilities", i:"M3 5h18v12H3zM3 19h18M7 9h10M7 12h6"},
+  {n:"Event Space", i:"M4 20V9l8-5 8 5v11M9 20v-6h6v6"},
+  {n:"Parking", i:"M6 3h9a5 5 0 0 1 0 10H9v8H6zM9 5v6h6a3 3 0 0 0 0-6z"},
+  {n:"Reception", i:"M3 21h18M5 21V9l7-6 7 6v12M9 21v-6h6v6"},
+  {n:"Housekeeping", i:"M12 3v2m0 14v2M5 12H3m18 0h-2M6 6l1.4 1.4M16.6 16.6 18 18M6 18l1.4-1.4M16.6 7.4 18 6"},
+  {n:"Laundry", i:"M4 4h16v16H4zM12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"},
+  {n:"Elevator / Lift", i:"M8 3v18M16 3v18M8 8l2-2 2 2M8 16l2 2 2-2"},
+];
+const facilityGrid = document.getElementById('facilityGrid');
+facilities.forEach(f=>{
+  facilityGrid.insertAdjacentHTML('beforeend', `
+    <div class="facility-card fade-up bg-white rounded-sm p-6 text-center">
+      <svg class="mx-auto mb-4" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><path d="${f.i}"/></svg>
+      <p class="text-sm font-semibold">${f.n}</p>
+      <p class="placeholder-tag mt-1">[Confirm availability]</p>
+    </div>`);
+});
+
+const galleryItems = [
+  {cat:"Exterior", img:"https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200&auto=format&fit=crop"},
+  {cat:"Rooms", img:"https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1200&auto=format&fit=crop"},
+  {cat:"Interior", img:"https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1200&auto=format&fit=crop"},
+  {cat:"Restaurant", img:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop"},
+  {cat:"Events", img:"https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop"},
+  {cat:"Hotel", img:"https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1200&auto=format&fit=crop"},
+];
+const galleryGrid = document.getElementById('galleryGrid');
+const galleryFilters = document.getElementById('galleryFilters');
+const cats = ["All", ...new Set(galleryItems.map(g=>g.cat))];
+cats.forEach((c,i)=>{
+  galleryFilters.insertAdjacentHTML('beforeend', `<button data-cat="${c}" class="gfilter text-xs uppercase tracking-wide px-4 py-2 rounded-full border ${i===0?'bg-[var(--charcoal)] text-[var(--ivory)] border-[var(--charcoal)]':'border-[var(--line)] text-[var(--charcoal)]/70'}">${c}</button>`);
+});
+function renderGallery(filter){
+  galleryGrid.innerHTML = "";
+  galleryItems.filter(g=> filter==="All" || g.cat===filter).forEach(g=>{
+    galleryGrid.insertAdjacentHTML('beforeend', `
+      <button class="glightbox relative aspect-square overflow-hidden rounded-sm group" data-img="${g.img}">
+        <img src="${g.img}" alt="${g.cat} — placeholder photography" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+        <span class="absolute bottom-2 left-2 text-white text-[0.65rem] uppercase tracking-wide bg-black/50 px-2 py-1 rounded-sm">${g.cat}</span>
+      </button>`);
+  });
+  document.querySelectorAll('.glightbox').forEach(b=>{
+    b.addEventListener('click', ()=> openLightbox(b.dataset.img));
+  });
+}
+renderGallery("All");
+galleryFilters.addEventListener('click', e=>{
+  const btn = e.target.closest('.gfilter'); if(!btn) return;
+  document.querySelectorAll('.gfilter').forEach(b=>b.className = "gfilter text-xs uppercase tracking-wide px-4 py-2 rounded-full border border-[var(--line)] text-[var(--charcoal)]/70");
+  btn.className = "gfilter text-xs uppercase tracking-wide px-4 py-2 rounded-full border bg-[var(--charcoal)] text-[var(--ivory)] border-[var(--charcoal)]";
+  renderGallery(btn.dataset.cat);
+});
+function openLightbox(src){
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('open');
+}
+document.getElementById('lightboxClose').addEventListener('click', ()=> document.getElementById('lightbox').classList.remove('open'));
+document.getElementById('lightbox').addEventListener('click', e=>{ if(e.target.id==='lightbox') e.currentTarget.classList.remove('open'); });
+
+const reviews = [
+  { text:"A placeholder review will appear here until a genuine guest testimonial is provided.", name:"Placeholder Guest" },
+  { text:"Real reviews from Soreti International Hotel guests can be added here later.", name:"Placeholder Guest" },
+  { text:"This section is ready for authentic feedback once it becomes available.", name:"Placeholder Guest" },
+];
+const reviewGrid = document.getElementById('reviewGrid');
+reviews.forEach(r=>{
+  reviewGrid.insertAdjacentHTML('beforeend', `
+    <div class="fade-up bg-white p-8 rounded-sm border border-[var(--line)]">
+      <p class="stars mb-4">★★★★★</p>
+      <p class="text-[var(--charcoal)]/80 italic mb-5">"${r.text}"</p>
+      <p class="text-sm font-semibold">${r.name}</p>
+      <p class="placeholder-tag">[Placeholder review]</p>
+    </div>`);
+});
+
+/* ---------- Nav interactions ---------- */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', ()=>{
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', ()=>{
+  const isHidden = mobileMenu.classList.contains('hidden');
+  mobileMenu.classList.toggle('hidden');
+  menuBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+});
+document.querySelectorAll('.mobile-link').forEach(a=> a.addEventListener('click', ()=> mobileMenu.classList.add('hidden')));
+
+/* ---------- Fade-up on scroll ---------- */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.15 });
+document.querySelectorAll('.fade-up').forEach(el=> io.observe(el));
+
+/* ---------- Booking search form ---------- */
+document.getElementById('searchForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  document.getElementById('rooms').scrollIntoView({behavior:'smooth'});
+});
+
+/* ---------- Contact form ---------- */
+document.getElementById('contactForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const form = e.target;
+  const status = document.getElementById('contactStatus');
+  if(!form.checkValidity()){
+    status.textContent = "Please fill in all required fields.";
+    status.className = "text-sm text-red-600";
+    status.classList.remove('hidden');
+    return;
+  }
+  status.textContent = "Thank you — your message has been received. The hotel team will contact you shortly. (Note: email delivery requires backend/email integration to be connected.)";
+  status.className = "text-sm text-green-700";
+  status.classList.remove('hidden');
+  form.reset();
+});
+
+/* ---------- Room detail view (placeholder) ---------- */
+document.addEventListener('click', e=>{
+  const btn = e.target.closest('.view-room');
+  if(!btn) return;
+  alert(`${btn.dataset.room}\n\nFull room-detail pages (gallery, amenities, live pricing, and availability) will be built once real room information and a backend are connected.`);
+});
+
+/* ---------- AI Concierge (placeholder assistant) ---------- */
+const aiToggle = document.getElementById('ai-toggle');
+const aiPanel = document.getElementById('ai-panel');
+const aiClose = document.getElementById('ai-close');
+const aiMessages = document.getElementById('ai-messages');
+const aiForm = document.getElementById('ai-form');
+const aiInput = document.getElementById('ai-input');
+
+function addMsg(text, from){
+  const isUser = from === 'user';
+  aiMessages.insertAdjacentHTML('beforeend', `
+    <div class="flex ${isUser?'justify-end':'justify-start'}">
+      <div class="msg-bubble px-4 py-2.5 rounded-sm ${isUser? 'bg-[var(--gold)] text-[var(--black)]' : 'bg-[var(--black)] text-[var(--ivory)] border border-[var(--line)]'}">${text}</div>
+    </div>`);
+  aiMessages.scrollTop = aiMessages.scrollHeight;
+}
+addMsg("Welcome to Soreti International Hotel. I'm the Soreti AI Concierge — ask me about rooms, dining, facilities, or events.", 'bot');
+
+const FALLBACK = "I'm sorry, I don't have confirmed information about that. Please contact Soreti International Hotel directly.";
+const KNOWN = {
+  room: "We offer Standard, Deluxe, Executive, and Suite rooms. Exact pricing, sizes, and availability are confirmed directly with the hotel.",
+  restaurant: "Our restaurant serves Ethiopian and international cuisine across breakfast, lunch, and dinner. Menu and hours are confirmed directly with the hotel.",
+  book: "You can request a booking using the form at the top of the page, or contact the hotel directly via phone or WhatsApp.",
+  event: "We host conferences, meetings, weddings, and private events. Capacity and equipment details are confirmed directly with the hotel.",
+  contact: "You can reach Soreti International Hotel via the contact form, phone, or WhatsApp — see the Contact section for details.",
+};
+aiForm.addEventListener('submit', e=>{
+  e.preventDefault();
+  const q = aiInput.value.trim();
+  if(!q) return;
+  addMsg(q, 'user');
+  aiInput.value = "";
+  setTimeout(()=>{
+    const lower = q.toLowerCase();
+    let reply = FALLBACK;
+    for(const key in KNOWN){ if(lower.includes(key)){ reply = KNOWN[key]; break; } }
+    addMsg(reply, 'bot');
+  }, 450);
+});
+aiToggle.addEventListener('click', ()=> aiPanel.classList.remove('hidden-panel'));
+aiClose.addEventListener('click', ()=> aiPanel.classList.add('hidden-panel'));
+</script>
+</body>
+</html>
